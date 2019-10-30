@@ -1,0 +1,54 @@
+{
+  "name": "practicing-functional-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --no-cache ./src/exercises/",
+    "test:solutions": "jest --no-cache ./src/solutions/",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint two-fer.js",
+    "lint-test": "eslint . && jest --no-cache ./* "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosevukilonzo/practicing-functional-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosevukilonzo/practicing-functional-javascript/issues"
+  },
+  "homepage": "https://github.com/yosevukilonzo/practicing-functional-javascript#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@types/jest": "^24.0.16",
+    "@types/node": "^12.6.8",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint-plugin-functional": "^1.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint": "^6.1.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.json"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintIgnore": [
+    "*.spec.js"
+  ]
+}
