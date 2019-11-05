@@ -145,23 +145,6 @@ const twoFer = name =>
 
 #### Version 1
 
-😰 Defines a [mutable][immutability] array.
-
-``` javascript
-const COLORS = [
-  'black',
-  'brown',
-  'red',
-  'orange',
-  'yellow',
-  'green',
-  'blue',
-  'violet',
-  'grey',
-  'white'
-];
-```
-
 😰 Uses a [method][method].
 
 ``` javascript
@@ -170,24 +153,7 @@ const colorCode = color => COLOR.indexOf(color);
 
 #### Version 2
 
-😌 Declares a [shallow][shallow freeze], frozen object.
-
-``` javascript
-const COLORS = Object.freeze([
-  'black',
-  'brown',
-  'red',
-  'orange',
-  'yellow',
-  'green',
-  'blue',
-  'violet',
-  'grey',
-  'white'
-])
-```
-
-😌 Uses a [composable][function composition] function.
+😌 Uses a [composable][#function-composition] function.
 
 ``` javascript
 const colorCode = color => indexOf(color, COLORS);
@@ -274,9 +240,58 @@ Type systems are not strictly required for functional programming since the Lamb
 
 ## Reference
 
-- __Action__: Code that is called for its side effects not a return value.
-- __Declarative__: A description of what the code does, not the steps to do it.
-- __Expression__: Code that evaluates to and returns a value.
+### Action
+
+Code that is called for its side effects not a return value.
+
+### Declarative
+
+A description of what the code does, not the steps to do it.
+
+### Expression
+
+Code that evaluates to and returns a value.
+
+### Function
+
+A mapping from inputs to outputs.
+
+- [Function (FP Jargon)](https://github.com/hemanth/functional-programming-jargon#function)
+- [Functions (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+
+### Function Composition
+
+- [Function Composition (FP Jargon)](https://github.com/hemanth/functional-programming-jargon#function-composition)
+- [Function Composition (Wikipedia)](https://en.wikipedia.org/wiki/Function_composition_%28computer_science%29)
+
+### Imperative
+
+The steps for how the code does something.
+
+### Immutability
+
+- [Immutable Object (FP Jargon)](https://en.wikipedia.org/wiki/Immutable_object)
+
+### Method
+
+- [Method (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Method)
+
+### Pure Function
+
+A function which has a return value that is only affected by its input parameters, no side effects.
+
+- [Purity](https://github.com/hemanth/functional-programming-jargon#purity)
+- [Pure function](https://en.wikipedia.org/wiki/Pure_function).
+
+### Side Effect
+
+Reading or writing to an external variable or reference.
+
+### [Side effects (FP Jargon)](https://github.com/hemanth/functional-programming-jargon#side-effects)
+
+### [Side effect (Wikipedia)](https://en.wikipedia.org/wiki/Side_effect_(computer_science)).
+
+### Statement
 
 - __Imperative__: The steps for how the code does something.
 - __Immutability__: A key characteristic of functional programming. TODO: Define
