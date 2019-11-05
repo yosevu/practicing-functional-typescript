@@ -30,6 +30,9 @@ Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=
 
 ## Exercises
 
+This section outlines each exercise, describing different aspects of a
+solution from a functional perspective, referencing specific code examples.
+
 😌 Less thinking 😰 More thinking
 
 1. [Hello World](#hello-world)
@@ -140,6 +143,56 @@ const twoFer = name =>
 
 ### Resistor Color
 
+#### Version 1
+
+😰 Defines a [mutable][immutability] array.
+
+``` javascript
+const COLORS = [
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white'
+];
+```
+
+😰 Uses a [method][method].
+
+``` javascript
+const colorCode = color => COLOR.indexOf(color);
+```
+
+#### Version 2
+
+😌 Declares a [shallow][shallow freeze], frozen object.
+
+``` javascript
+const COLORS = Object.freeze([
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white'
+])
+```
+
+😌 Uses a [composable][function composition] function.
+
+``` javascript
+const colorCode = color => indexOf(color, COLORS);
+```
+
 ### Resistor Color Duo
 
 ### RNA Transcription
@@ -159,7 +212,7 @@ const twoFer = name =>
 
 Practicing Functional JavaScript is a collection of [exercises](#what-is-the-approach) that help you level up your functional programming skills with JavaScript. These exercises emphasize experience and building patterns through exposure to many examples. Understanding concepts like function composition and referential transparency is more useful when you can recognize them through repeated exposure to the patterns in specific examples.
 
-The exercises focus on the functional part of functional programming and the techniques that are available when working with [pure functions](#references). Working with functions is the best practical place to get started  with functional programming and a great way to practice patterns that can be used in any code base.
+The exercises focus on the functional part of functional programming and the techniques that are available when working with [pure functions](#reference). Working with functions is the best practical place to get started  with functional programming and a great way to practice patterns that can be used in any code base.
 
 Note: This is not intended to cover the equally important (but more advanced topics) of structuring data and managing state and side effects.
 
@@ -224,7 +277,10 @@ Type systems are not strictly required for functional programming since the Lamb
 - __Action__: Code that is called for its side effects not a return value.
 - __Declarative__: A description of what the code does, not the steps to do it.
 - __Expression__: Code that evaluates to and returns a value.
+
 - __Imperative__: The steps for how the code does something.
+- __Immutability__: A key characteristic of functional programming. TODO: Define
+- __Mutablity__: A key characteristic of imperative programming. TODO: Define
 - __Pure Function__: A function which has a return value that is only affected by its input parameters, no side effects. See [Purity](https://github.com/hemanth/functional-programming-jargon#purity) and [Pure function](https://en.wikipedia.org/wiki/Pure_function).
 - __Side effect__: Reading or writing to an external variable or reference. See [Side effects](https://github.com/hemanth/functional-programming-jargon#side-effects) and [Side effect](https://en.wikipedia.org/wiki/Side_effect_(computer_science)).
 - __Statement__: An instruction that performs an imperative action.
@@ -249,3 +305,10 @@ Type systems are not strictly required for functional programming since the Lamb
   (The Wizard Book and [lectures](https://www.youtube.com/playlist?list=PLE18841CABEA24090)) by Gerald Jay Sussman and Hal Abelson
 - [Thinking in Ramda](http://randycoulman.com/blog/categories/thinking-in-ramda/) by Randy Coulman (Great for beginners)
 - [Why Ramda](https://fr.umio.us/why-ramda/) by Scott Sauyet
+
+---
+
+[functiton composition]: https://github.com/hemanth/functional-programming-jargon#function-composition
+[immutability]: https://en.wikipedia.org/wiki/Immutable_object
+[method]: https://developer.mozilla.org/en-US/docs/Glossary/Method
+[shallow freeze]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)[shallow immutability]
