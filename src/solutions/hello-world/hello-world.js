@@ -1,13 +1,23 @@
-import { always } from 'ramda';
+import { always, identity } from 'ramda';
 
-/* Version 1 */
+/* Hello: Version 1 */
 
 // () -> string
 // const hello = () => 'Hello, World!';
 
-/* Version 2 */
+/* Hello: Version 2 */
 
 // () -> string
 const hello = always('Hello, World!');
 
-export { hello };
+/* Greet: Version 1 */
+
+// helloWorld :: String -> String
+// const hello = greeting => greeting;
+
+/* Greet: Version 2 */
+
+// greet :: String -> String
+const greet = greeting => identity(greeting);
+
+export { greet, hello };
