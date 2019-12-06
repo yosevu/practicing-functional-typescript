@@ -22,7 +22,7 @@ Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=
 
 ## Usage
 
-- Clone this repository: `git clone git@github.com:yosevukilonzo/practicing-functional-javascript.git`.
+- Clone this repository: `git clone git@github.com:yosevu/practicing-functional-javascript.git`.
 - Change to the exercises directory: `cd practicing-functional-javascript/src/exercises`.
 - Run tests: `npm test hello-world`.
 - Run tests in watch mode: `npm watch hello-world`.
@@ -62,7 +62,7 @@ const hello = always('Hello, World!');
 
 ### Two Fer
 
-[Discuss Two Fer](https://github.com/yosevukilonzo/practicing-functional-javascript/issues/20)
+[Discuss Two Fer](https://github.com/yosevu/practicing-functional-javascript/issues/20)
 
 #### Version 1
 
