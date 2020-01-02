@@ -42,6 +42,8 @@ Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=
 
 ### Hello World
 
+[Solution](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/solutions/hello-world/hello-world.js)
+
 #### Version 1
 
 - Uses an anonymous function. 😰
@@ -62,7 +64,8 @@ const hello = always('Hello, World!');
 
 ### Two Fer
 
-[Discuss Two Fer](https://github.com/yosevu/practicing-functional-javascript/issues/20)
+[Discuss](https://github.com/yosevu/practicing-functional-javascript/issues/20)
+[Solution](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/solutions/two-fer/two-fer.js)
 
 #### Version 1
 
