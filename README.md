@@ -8,7 +8,7 @@ Why bother?
 
 Functions are simple. They are the simplest building blocks we have for making useful software. Simplicity matters because building software is hard. It is also easy to make building software more complex than necessary to solve the essential user problem. This [accidental complexity](https://en.wikipedia.org/wiki/No_Silver_Bullet#Summary) makes software harder to understand, harder to test, harder to maintain, more expensive, and ultimately not very fun to work with. But it doesn’t have to be that way!
 
-The difference between [simple](https://en.wiktionary.org/wiki/simple#English) and [complex](https://en.wiktionary.org/wiki/complex#Etymology) is not just that complex things have more parts but that those parts are folded together&mdash;entwined. Working with [pure](https://github.com/hemanth/functional-programming-jargon#purity) functions and [composing](https://github.com/hemanth/functional-programming-jargon#function-composition) them to solve problems are essential functional programming skills that can be used to untwine and simplify this type of complexity.
+The difference between [simple](https://en.wiktionary.org/wiki/simple#English) and [complex](https://en.wiktionary.org/wiki/complex#Etymology) is not just that complex things have more parts but that those parts are folded together&mdash;entwined. Working with [pure](https://github.com/hemanth/functional-programming-jargon#purity) functions and [composing](#function-composition) them to solve problems are essential functional programming skills that can be used to untwine and simplify this type of complexity.
 
 Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=25s). Hard problems are still hard. Simplicity only makes a hard problem easier to think about by breaking it into independent subproblems. These subproblems are easier to understand and solve in isolation and can be composed to form the larger solution.
 
@@ -161,6 +161,37 @@ const colorCode = color => indexOf(color, COLORS);
 
 ### Resistor Color Duo
 
+The same notes from Resistor Color apply here with some additions.
+
+#### Version 1
+
+😰 Declares a function [block][block].
+😰 Uses a [return statement][return statement].
+
+```javascript
+const value = colorNames => {
+  const colorCodes = colorNames
+    .map(colorCode)
+    .slice(0, 2)
+    .join('');
+
+  return Number(colorCodes);
+};
+```
+
+#### Version 2
+
+😌 [Composes]((#function-composition)) functions with [`pipe`](https://ramdajs.com/docs/#pipe).
+
+```javascript
+const value = colorNames => pipe(
+  map(colorCode),
+  take(2),
+  join(''),
+  Number
+)(colorNames);
+```
+
 ### RNA Transcription
 
 ### Gigasecond
@@ -293,12 +324,7 @@ Reading or writing to an external variable or reference.
 
 ### Statement
 
-- __Imperative__: The steps for how the code does something.
-- __Immutability__: A key characteristic of functional programming. TODO: Define
-- __Mutablity__: A key characteristic of imperative programming. TODO: Define
-- __Pure Function__: A function which has a return value that is only affected by its input parameters, no side effects. See [Purity](https://github.com/hemanth/functional-programming-jargon#purity) and [Pure function](https://en.wikipedia.org/wiki/Pure_function).
-- __Side effect__: Reading or writing to an external variable or reference. See [Side effects](https://github.com/hemanth/functional-programming-jargon#side-effects) and [Side effect](https://en.wikipedia.org/wiki/Side_effect_(computer_science)).
-- __Statement__: An instruction that performs an imperative action.
+An instruction that performs an imperative action.
 
 ## Resources
 
@@ -323,7 +349,5 @@ Reading or writing to an external variable or reference.
 
 ---
 
-[functiton composition]: https://github.com/hemanth/functional-programming-jargon#function-composition
-[immutability]: https://en.wikipedia.org/wiki/Immutable_object
-[method]: https://developer.mozilla.org/en-US/docs/Glossary/Method
-[shallow freeze]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze#What_is_shallow_freeze)[shallow immutability]
+[block]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block
+[return statement]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return
