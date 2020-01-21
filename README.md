@@ -33,8 +33,6 @@ Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=
 This section outlines each exercise, describing different aspects of a
 solution from a functional perspective, referencing specific code examples.
 
-😌 Less thinking 😰 More thinking
-
 1. [Hello World](#hello-world)
 1. [Two Fer](#two-fer)
 1. [Resistor Color](#resistor-color)
