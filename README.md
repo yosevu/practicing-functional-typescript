@@ -17,7 +17,6 @@ Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=
 - [Usage](#usage)
 - [Exercises](#exercises)
 - [Questions](#questions)
-- [Reference](#reference)
 - [Resources](#resources)
 
 ## Usage
@@ -266,63 +265,6 @@ to learn from and understand functional programming.
 > A classical type system for the lambda calculus with parametric polymorphism.
 
 Type systems are not strictly required for functional programming since the Lambda Calculus foundation that Functional Programming is based on can be typed or untyped. Whether strongly typed or dynamic like JavaScript, thinking about the type signatures of functions is a useful skill. We will use the standard [Hindley-Milner type system](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system) and annotate our functions in comments. See [Chapter 7: Hindley-Milner and Me](https://drboolean.gitbooks.io/mostly-adequate-guide-old/content/ch7.html) of Professor Frisby's Mostly Adequate Guide to Functional Programming for a fun and accessible introduction.
-
-## Reference
-
-### Action
-
-Code that is called for its side effects not a return value.
-
-### Declarative
-
-A description of what the code does, not the steps to do it.
-
-### Expression
-
-Code that evaluates to and returns a value.
-
-### Function
-
-A mapping from inputs to outputs.
-
-- [Function (FP Jargon)](https://github.com/hemanth/functional-programming-jargon#function)
-- [Functions (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
-
-### Function Composition
-
-- [Function Composition (FP Jargon)](https://github.com/hemanth/functional-programming-jargon#function-composition)
-- [Function Composition (Wikipedia)](https://en.wikipedia.org/wiki/Function_composition_%28computer_science%29)
-
-### Imperative
-
-The steps for how the code does something.
-
-### Immutability
-
-- [Immutable Object (FP Jargon)](https://en.wikipedia.org/wiki/Immutable_object)
-
-### Method
-
-- [Method (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Method)
-
-### Pure Function
-
-A function which has a return value that is only affected by its input parameters, no side effects.
-
-- [Purity](https://github.com/hemanth/functional-programming-jargon#purity)
-- [Pure function](https://en.wikipedia.org/wiki/Pure_function).
-
-### Side Effect
-
-Reading or writing to an external variable or reference.
-
-### [Side effects (FP Jargon)](https://github.com/hemanth/functional-programming-jargon#side-effects)
-
-### [Side effect (Wikipedia)](https://en.wikipedia.org/wiki/Side_effect_(computer_science)).
-
-### Statement
-
-An instruction that performs an imperative action.
 
 ## Resources
 
