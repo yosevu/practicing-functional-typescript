@@ -19,7 +19,7 @@ Note: [Simple does not mean easy](https://www.youtube.com/watch?v=oytL881p-nQ&t=
 - [Questions](#questions)
 - [Resources](#resources)
 
-## Usage
+## Start
 
 - Clone this repository: `git clone git@github.com:yosevu/practicing-functional-javascript.git`.
 - Change to the exercises directory: `cd practicing-functional-javascript/src/exercises`.
@@ -52,7 +52,7 @@ Practicing Functional JavaScript is a collection of [exercises](#what-is-the-app
 
 The exercises focus on the functional part of functional programming and the techniques that are available when working with [pure functions](#reference). Working with functions is the best practical place to get started  with functional programming and a great way to practice patterns that can be used in any code base.
 
-Note: This is not intended to cover the equally important (but more advanced topics) of structuring data and managing state and side effects.
+_Note: This is not intended to cover the equally important (but more advanced topics) of structuring data and managing state and side effects._
 
 ### Why does this exist?
 
@@ -62,11 +62,16 @@ There are some great [functional programming resources](#resources) that use Jav
 
 ### Who is this for?
 
-Practicing Functional JavaScript is for anyone who wants to practice functional programming patterns and functional thinking in JavaScript by refactoring exercises from imperative to functional solutions.
+Practicing Functional JavaScript is for anyone who wants to practice functional programming patterns and functional thinking in JavaScript.
 
 This is not intended to be used on its own, especially for people who are learning to code. Functional programming is a great introduction to programming, but Practicing Functional JavaScript doesn’t try to teach the concepts, it simply provides a resource of examples for mapping those concepts to. For some great introductory resources, see [resources](#resources).
 
 ### What is the approach?
+
+Solve each exercises in two ways.
+
+1. Use core JavaScript functional functions, methods, and other features.
+1. Use Ramda utility functions and functional programming patterns.
 
 #### Exercism
 
