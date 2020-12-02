@@ -61,7 +61,7 @@ const EARTH_YEARS_ON = {
 }
 
 // earthYears :: number -> number
-const earthYears = ageIndSeconds => divide(ageIndSeconds, EARTH_YEAR_IN_SECONDS)
+const earthYears = ageInSeconds => divide(ageInSeconds, EARTH_YEAR_IN_SECONDS)
 
 // yearsOnPlanet :: number -> number
 const yearsOn = curry((planet, earthYears) => divide(earthYears, EARTH_YEARS_ON[planet]))
