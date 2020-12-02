@@ -1,26 +1,16 @@
-import { always, curry, ifElse, isNil } from 'ramda';
+import { always, curry, ifElse, isNil } from 'ramda'
 
-/* Version 1 */
-
-// twoFer :: String -> String
-// const twoFer = name => {
-//   if (!name) {
-//     return 'One for you, one for me.';
-//   }
-
-//   return `One for ${name}, one for me.`;
-// };
-
-/* Version 2 */
+/* Core JavaScript */
 
 // twoFer :: String -> String
 // const twoFer = name =>
-  // name ? `One for ${name}, one for me.` : 'One for you, one for me.';
+//       name ? `One for ${name}, one for me.` : 'One for you, one for me.'
 
-/* Version 3 */
+
+/* Ramda */
 
 // interpolate :: String -> String -> String -> String
-const interpolate = curry((before, after, value) => before + value + after);
+const interpolate = curry((before, after, value) => before + value + after)
 
 // twoFer :: String -> String
 const twoFer = name =>
@@ -32,4 +22,4 @@ const twoFer = name =>
 
 export { 
   twoFer,
-};
+}

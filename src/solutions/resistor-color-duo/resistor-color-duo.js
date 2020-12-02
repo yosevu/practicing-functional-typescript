@@ -1,6 +1,6 @@
-import { indexOf, join, map, pipe, take } from 'ramda';
+import { indexOf, join, map, pipe, take } from 'ramda'
 
-/* Version 1 */
+/* Core JavaScript */
 
 // const COLORS = [
 //   'black',
@@ -13,22 +13,19 @@ import { indexOf, join, map, pipe, take } from 'ramda';
 //   'violet',
 //   'grey',
 //   'white'
-// ];
+// ]
 
 // colorCode :: String -> Number
-// const colorCode = color => COLORS.indexOf(color);
+// const colorCode = color => COLORS.indexOf(color)
 
 // value :: [String] -> number
-// const value = colorNames => {
-//   const colorCodes = colorNames
+// const value = colorNames => Number(
+//   colorNames
 //     .map(colorCode)
 //     .join('')
-//     .slice(0, 2);
+//     .slice(0, 2))
 
-//   return Number(colorCodes);
-// };
-
-/* Version 2 */
+/* Ramda */
 
 const COLORS = [
   'black',
@@ -41,10 +38,10 @@ const COLORS = [
   'violet',
   'grey',
   'white'
-];
+]
 
 // colorCode :: String -> Number
-const colorCode = color => indexOf(color, COLORS);
+const colorCode = color => indexOf(color, COLORS)
 
 // value :: [String] -> number
 const value = colorNames => pipe(
@@ -52,8 +49,8 @@ const value = colorNames => pipe(
   join(''),
   take(2),
   Number
-)(colorNames);
+)(colorNames)
 
 export {
   value
-};
+}

@@ -1,6 +1,6 @@
-import { indexOf } from 'ramda';
+import { indexOf } from 'ramda'
 
-/* Version 1 */
+/* Core JavaScript */
 
 // const COLORS = [
 //   'black',
@@ -13,12 +13,13 @@ import { indexOf } from 'ramda';
 //   'violet',
 //   'grey',
 //   'white'
-// ];
+// ]
 
 // colorCode :: String -> Number
-// const colorCode = color => COLORS.indexOf(color);
+// const colorCode = color => COLORS.indexOf(color)
 
-/* Version 2 */
+
+/* Ramda */
 
 const COLORS = [
   'black',
@@ -31,12 +32,12 @@ const COLORS = [
   'violet',
   'grey',
   'white',
-];
+]
 
 // colorCode :: String -> Number
-const colorCode = color => indexOf(color, COLORS);
+const colorCode = color => indexOf(color, COLORS)
 
 export {
   COLORS,
   colorCode
-};
+}

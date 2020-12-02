@@ -1,15 +1,15 @@
-import { always } from 'ramda';
+import { always } from 'ramda'
 
-/* Version 1 */
+/* Core JavaScript */
 
 // hello :: () -> string
-// const hello = () => 'Hello, World!';
+// const hello = () => 'Hello, World!'
 
-/* Version 2 */
+/* Ramda */
 
 // hello :: () -> String
-const hello = always('Hello, World!');
+const hello = always('Hello, World!')
 
 export {
   hello,
-};
+}
