@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "watch": "jest --watch",
-    "lint": "eslint src/exercises/"
+    "test": "jest src/solutions",
+    "watch": "jest --watch src/solutions",
+    "lint": "eslint src/solutions"
   },
   "repository": {
     "type": "git",
