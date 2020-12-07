@@ -1,7 +1,7 @@
 import { value } from './resistor-color-duo.js';
 
 describe('Resistor Colors', () => {
-  test('Brown and black', () => {
+  xtest('Brown and black', () => {
     expect(value(['brown', 'black'])).toEqual(10);
   });
 

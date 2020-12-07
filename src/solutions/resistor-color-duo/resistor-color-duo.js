@@ -1,31 +1,4 @@
-import { indexOf, join, map, pipe, take } from 'ramda'
-
-/* Core JavaScript */
-
-// const COLORS = [
-//   'black',
-//   'brown',
-//   'red',
-//   'orange',
-//   'yellow',
-//   'green',
-//   'blue',
-//   'violet',
-//   'grey',
-//   'white'
-// ]
-
-// colorCode :: String -> Number
-// const colorCode = color => COLORS.indexOf(color)
-
-// value :: [String] -> number
-// const value = colorNames => Number(
-//   colorNames
-//     .map(colorCode)
-//     .join('')
-//     .slice(0, 2))
-
-/* Ramda */
+import { add, indexOf, multiply } from 'ramda'
 
 const COLORS = [
   'black',
@@ -40,16 +13,18 @@ const COLORS = [
   'white'
 ]
 
-// colorCode :: String -> Number
+// Core JavaScript
+
+// const colorCode = color => COLORS.indexOf(color)
+
+// const value = ([ tens, ones ]) => 10 * colorCode(tens) + colorCode(ones)
+
+// Ramda
+
 const colorCode = color => indexOf(color, COLORS)
 
-// value :: [String] -> number
-const value = colorNames => pipe(
-  map(colorCode),
-  join(''),
-  take(2),
-  Number
-)(colorNames)
+// :: [String] -> number
+const value = ([ tens, ones ]) => add(multiply(10, colorCode(tens)), colorCode(ones))
 
 export {
   value

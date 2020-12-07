@@ -35,8 +35,8 @@ This is an index of the the exercises.
 1. [Two Fer](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/two-fer)
 1. [Resistor Color](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/resistor-color)
 1. [Resistor Color Duo](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/resistor-color-duo)
-1. [RNA Transcription](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/rna-transcription)
 1. [Gigasecond](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/gigasecond)
+1. [RNA Transcription](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/rna-transcription)
 1. [Space Age](https://github.com/yosevu/practicing-functional-javascript/blob/master/src/exercises/space-age)
 
 ## Questions

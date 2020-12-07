@@ -1,11 +1,10 @@
 import { always } from 'ramda'
 
-/* Core JavaScript */
+// Core JavaScript
 
-// hello :: () -> string
 // const hello = () => 'Hello, World!'
 
-/* Ramda */
+// Ramda
 
 // hello :: () -> String
 const hello = always('Hello, World!')

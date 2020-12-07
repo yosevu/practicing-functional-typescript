@@ -1,10 +1,12 @@
 import { add, constructN, pipe } from 'ramda'
 
-/* Core JavaScript */
+// Core JavaScript
 
 // const gigasecond = utcDate => new Date(Number(utcDate) + 10E11)
 
-/* Ramda */
+// Ramda
+
+// :: String -> String
 const gigasecond = utcDate => pipe(
   Number,
   add(10E11),
