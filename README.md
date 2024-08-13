@@ -1,4 +1,4 @@
-# Practicing Functional JavaScript
+# Practicing Functional TypeScript
 
 Why bother?
 
