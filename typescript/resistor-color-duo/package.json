@@ -27,12 +27,12 @@
     "typescript-eslint": "^7.18.0"
   },
   "scripts": {
-    "test": "corepack yarn node test-runner.mjs",
-    "test:types": "corepack yarn tstyche",
-    "test:implementation": "corepack yarn jest --no-cache --passWithNoTests",
-    "lint": "corepack yarn lint:types && corepack yarn lint:ci",
-    "lint:types": "corepack yarn tsc --noEmit -p .",
-    "lint:ci": "corepack yarn eslint . --ext .tsx,.ts"
+    "test": "jest",
+    "test:types": "tstyche",
+    "test:implementation": "jest --no-cache --passWithNoTests",
+    "lint": "yarn lint:types && yarn lint:ci",
+    "lint:types": "tsc --noEmit -p .",
+    "lint:ci": "eslint . --ext .tsx,.ts"
   },
   "packageManager": "yarn@4.3.1"
 }
