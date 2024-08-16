@@ -1,42 +1,30 @@
-type Colors = string[]
+const COLORS = [
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white',
+] as const;
 
-class ResistorColorDuo {
-  private colors: Colors
+type Color = (typeof COLORS)[number];
 
-  COLORS = [
-      'black',
-      'brown',
-      'red',
-      'orange',
-      'yellow',
-      'green',
-      'blue',
-      'violet',
-      'grey',
-      'white',
-    ]
+const isColor = (color: string): color is Color => COLORS.includes(color as Color);
 
-  constructor(colors: Colors) {
-    this.colors = this.validate(colors)
+const validateColors = (colors: readonly string[]): readonly Color[] => {
+  if (colors.length < 2) {
+    throw new Error('At least two colors need to be present');
   }
+  return colors.slice(0, 2).filter(isColor) as readonly Color[];
+};
 
-  validate = (colors: Colors): Colors => {
-    if (colors.length < 2) {
-      throw new Error('At least two colors need to be present')
-    }
+const colorCode = (color: Color) => COLORS.indexOf(color);
 
-    return colors
-  }
-
-  colorCode = (color: string): number => this.COLORS.indexOf(color)
-
-  decodedValue = (): number => {
-    const [ tens, ones ] = this.colors
-    return 10 * this.colorCode(tens) + this.colorCode(ones)
-  }
-}
-
-export function decodedValue(colors: Colors) {
-  const resistorColorDuo = new ResistorColorDuo(colors)
-  return resistorColorDuo.decodedValue()
-}
+export const decodedValue = (colors: readonly string[]): number => {
+  const [tens, ones] = validateColors(colors);
+  return 10 * colorCode(tens) + colorCode(ones);
+};
